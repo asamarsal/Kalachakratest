@@ -27,14 +27,14 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
             children: [
               AnimateGradient(
                 primaryColors: const [
-                  Colors.blue,
-                  Colors.blue,
-                  Colors.blue,
+                  Colors.white,
+                  Colors.white,
+                  Colors.white,
                 ],
                 secondaryColors: const [
-                  Colors.blue,
-                  Colors.blue,
-                  Colors.blue,
+                  Colors.white,
+                  Colors.white,
+                  Colors.white,
                 ],
                 child: Container(
                   decoration: const BoxDecoration(),
@@ -135,7 +135,6 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                                     showDialog(
                                         context: context,
                                         builder: (context) => const CustomDialogWidget(),
-                                      
                                     );
                                   },
                                   child: Container(
@@ -164,6 +163,92 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(height: 20.0,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    color: Color(0XFFEAFBF8),
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: Lottie.asset(
+                                    'assets/animations/dotgreen.json',
+                                    width: 5,
+                                    height: 5,
+                                  ),
+                                ),
+                                SizedBox(height: 5.0,),
+                                Image.asset('assets/connectorgrey.png'),
+                              ],
+                            ),
+                            SizedBox(width: 10.0,),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Registration number',
+                                  style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71)),
+                                ),
+                                SizedBox(height: 5.0,),
+                                Text(
+                                  'Please insert vehicle registration number.',
+                                  style: TextStyle(fontSize: 14, color: Color(0XFF24A896)),
+                                ),
+                              ],
+                            ),
+                          ]
+                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    color: Color(0XFFF9FAFB),
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: const Icon(
+                                    CupertinoIcons.circle_filled,
+                                    size: 10,
+                                    color: Color(0xFFEAECF0),
+                                  ),
+                                ),
+                                Image.asset('assets/connectorgrey.png'),
+                              ],
+                            ),
+                            SizedBox(width: 10.0,),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Detail Information',
+                                  style: TextStyle(fontSize: 18, color: Color(0xFF344054)),
+                                ),
+                                SizedBox(height: 5.0,),
+                                Text(
+                                  'Please insert vehicle detail information',
+                                  style: TextStyle(fontSize: 14, color: Color(0XFF667085)),
+                                ),
+                              ],
+                            ),
+                          ]
+                      ),
                   ),
                 ],
               ),
