@@ -548,93 +548,94 @@ class _VehiclespecificationPageState extends State<VehiclespecificationPage> {
                               ],
                             ),
                             SizedBox(height: 40.0,),
-                            Row(
-                                children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        width: 30,
-                                        height: 30,
-                                        decoration: BoxDecoration(
-                                          color: Color(0XFFEAFBF8),
-                                          borderRadius: BorderRadius.circular(15),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 0),
+                              child: Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            color: Color(0XFFEAFBF8),
+                                            borderRadius: BorderRadius.circular(15),
+                                          ),
+                                          child: const Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                CupertinoIcons.checkmark_alt,
+                                                color: Color(0xFF24A896),
+                                                size: 18,
+                                              )
+                                            ],
+                                          ),
                                         ),
-                                        alignment: Alignment.center,
-                                        child: const Icon(
-                                          CupertinoIcons.checkmark,
-                                          size: 20,
-                                          color: Color(0xFF24A896),
+                                        Image.asset('assets/connectorhijau.png'),
+                                      ],
+                                    ),
+                                    SizedBox(width: 10.0,),
+                                    const Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Registration number',
+                                          style: TextStyle(fontSize: 18, color: Color(0xFF344054)),
                                         ),
-                                      ),
-                                      SizedBox(height: 5.0,),
-                                      const Icon(
-                                        CupertinoIcons.arrow_down,
-                                        size: 20,
-                                        color: Color(0XFF24A896),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(width: 10.0,),
-                                  const Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Registration number',
-                                        style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71)),
-                                      ),
-                                      SizedBox(height: 5.0,),
-                                      Text(
-                                        'Please insert vehicle registration number.',
-                                        style: TextStyle(fontSize: 14, color: Color(0XFF24A896)),
-                                      ),
-                                    ],
-                                  ),
-                                ]
+                                        SizedBox(height: 5.0,),
+                                        Text(
+                                          'Please insert vehicle registration number.',
+                                          style: TextStyle(fontSize: 14, color: Color(0XFF667085)),
+                                        ),
+                                      ],
+                                    ),
+                                  ]
+                              ),
                             ),
-                            SizedBox(height: 20.0,),
-                            Row(
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 0),
+                              child: Row(
                                   children: [
-                                    Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                        color: Color(0XFFEAFBF8),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Lottie.asset(
-                                          'assets/animations/dotgreen.json',
-                                          width: 5,
-                                          height: 5,
-                                      ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            color: Color(0XFFEAFBF8),
+                                            borderRadius: BorderRadius.circular(15),
+                                          ),
+                                          child: Lottie.asset(
+                                            'assets/animations/dotgreen.json',
+                                            width: 5,
+                                            height: 5,
+                                          ),
+                                        ),
+                                        Image.asset('assets/connectorgrey.png'),
+                                      ],
                                     ),
-                                    SizedBox(height: 5.0,),
-                                    const Icon(
-                                      CupertinoIcons.arrow_down,
-                                      size: 20,
-                                      color: Color(0xFFEAECF0),
+                                    SizedBox(width: 10.0,),
+                                    const Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Detail Information',
+                                          style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71)),
+                                        ),
+                                        SizedBox(height: 5.0,),
+                                        Text(
+                                          'Please insert vehicle detail information',
+                                          style: TextStyle(fontSize: 14, color: Color(0XFF24A896)),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
-                                SizedBox(width: 10.0,),
-                                const Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Detail Information',
-                                      style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71)),
-                                    ),
-                                    SizedBox(height: 5.0,),
-                                    Text(
-                                      'Please insert vehicle detail information',
-                                      style: TextStyle(fontSize: 14, color: Color(0XFF24A896)),
-                                    ),
-                                  ],
-                                ),
-                              ]
+                                  ]
+                              ),
                             ),
                             SizedBox(height: 40.0,),
                             Padding(

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:animate_gradient/animate_gradient.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:bouncing_widget/bouncing_widget.dart';
+import 'package:kalachakra/pages/financingpage.dart';
 import 'package:kalachakra/pages/splashscreen.dart';
+import 'package:kalachakra/pages/vehicleregisteredpage.dart';
 import 'package:kalachakra/pages/vehicleregistrationpage.dart';
 import 'package:page_route_transition/page_route_transition.dart';
 
@@ -178,6 +180,51 @@ class _DashboardPageState extends State<DashboardPage> {
                                 ),
                               ),
                             ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          width: double.infinity,
+                          height: 60,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5.0,),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                                child: BouncingWidget(
+                                  duration: Duration(milliseconds: 100),
+                                  scaleFactor: 1.5,
+                                  onPressed: () {
+                                    PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                    PageRouteTransition.push(context, const VehicleregisteredPage());
+                                  },
+                                  child: Container(
+                                    width: 180,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      color: const Color(0XFF24A896),
+                                    ),
+                                    child: const Center(
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Financing Page',
+                                            style: TextStyle(color: Colors.white),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ]
                           ),
                         ),
                       ],

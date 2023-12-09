@@ -159,8 +159,11 @@ class _VehiclesentsuccessPageState extends State<VehiclesentsuccessPage> {
                     SizedBox(height: 20.0,),
                     GestureDetector(
                       onTap: () async {
-                        PageRouteTransition.effect = TransitionEffect.leftToRight;
-                        PageRouteTransition.push(context, const DashboardPage());
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          PageRouteTransitionBuilder(page: const DashboardPage(), effect: TransitionEffect.scale),
+                              (route) => false, // Kondisi di sini menentukan kapan stack halaman dihapus
+                        );
                       },
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,

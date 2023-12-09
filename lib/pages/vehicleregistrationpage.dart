@@ -4,7 +4,6 @@ import 'package:animate_gradient/animate_gradient.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:kalachakra/pages/DashboardPage.dart';
-import 'package:kalachakra/pages/splashscreen.dart';
 import 'package:kalachakra/pages/vehiclespecificationpage.dart';
 import 'package:page_route_transition/page_route_transition.dart';
 import 'package:lottie/lottie.dart';
@@ -186,7 +185,6 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                                     height: 5,
                                   ),
                                 ),
-                                SizedBox(height: 5.0,),
                                 Image.asset('assets/connectorgrey.png'),
                               ],
                             ),
