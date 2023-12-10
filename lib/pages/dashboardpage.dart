@@ -27,14 +27,14 @@ class _DashboardPageState extends State<DashboardPage> {
                   children: [
                     AnimateGradient(
                       primaryColors: const [
-                        Colors.blue,
-                        Colors.blue,
-                        Colors.blue,
+                        Colors.white,
+                        Colors.white,
+                        Colors.white,
                       ],
                       secondaryColors: const [
-                        Colors.blue,
-                        Colors.blue,
-                        Colors.blue,
+                        Colors.white,
+                        Colors.white,
+                        Colors.white,
                       ],
                       child: Container(
                         decoration: const BoxDecoration(),
@@ -182,49 +182,609 @@ class _DashboardPageState extends State<DashboardPage> {
                             ],
                           ),
                         ),
-                        Container(
+                        const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.0),
-                          width: double.infinity,
-                          height: 60,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
+                          child: Divider(
+                            color: Color(0xFFEAECF0),
+                            thickness: 1.0,
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 5.0,),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                                child: BouncingWidget(
-                                  duration: Duration(milliseconds: 100),
-                                  scaleFactor: 1.5,
-                                  onPressed: () {
-                                    PageRouteTransition.effect = TransitionEffect.leftToRight;
-                                    PageRouteTransition.push(context, const VehicleregisteredPage());
-                                  },
-                                  child: Container(
-                                    width: 180,
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      color: const Color(0XFF24A896),
-                                    ),
-                                    child: const Center(
+                        ),
+                        Expanded(
+                          child: SingleChildScrollView(
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Navigasi ke FinancingPage() ketika container diklik
+                                      PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                      PageRouteTransition.push(context, const FinancingPage());
+                                    },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0, right: 20.0),
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          Text(
-                                            'Financing Page',
-                                            style: TextStyle(color: Colors.white),
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Listing',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Customer service',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '2,420',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
                                           ),
                                         ],
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Navigasi ke FinancingPage() ketika container diklik
+                                      PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                      PageRouteTransition.push(context, const FinancingPage());
+                                    },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0,right: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Inspecting',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Marketing officer',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '1,210',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                    onTap: () {
+                                        // Navigasi ke FinancingPage() ketika container diklik
+                                        PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                        PageRouteTransition.push(context, const FinancingPage());
+                                      },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0,right: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Visited',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Marketing officer',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '20',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                      onTap: () {
+                                        // Navigasi ke FinancingPage() ketika container diklik
+                                        PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                        PageRouteTransition.push(context, const FinancingPage());
+                                      },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0,right: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Assigning surveyor',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Marketing head',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '2,420',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                      onTap: () {
+                                        // Navigasi ke FinancingPage() ketika container diklik
+                                        PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                        PageRouteTransition.push(context, const FinancingPage());
+                                      },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0,right: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Surveying',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Credit officer',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '1,210',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: InkWell(
+                                      onTap: () {
+                                        // Navigasi ke FinancingPage() ketika container diklik
+                                        PageRouteTransition.effect = TransitionEffect.leftToRight;
+                                        PageRouteTransition.push(context, const FinancingPage());
+                                      },
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 15.0,right: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            'assets/iconhijau.png',
+                                            height: 60,
+                                            width: 60,
+                                          ),
+                                          const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Approval',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF344504),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5.0,),
+                                              Text(
+                                                'Marketing officer',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFF667085),
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Spacer(),
+                                          const Text(
+                                            '20',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0XFF667085),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                SizedBox(height: 10.0,),
+                                //Closed
+                                Container(
+                                  height: 60,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                    child: const Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Closed', style: TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.w400)),
+                                            SizedBox(height: 5.0),
+                                            Text('Leads complete', style: TextStyle(fontSize: 14, color: Colors.black54)),
+                                            SizedBox(height: 10.0),
+                                          ],
+                                        ),
+                                    ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 25.0,right: 20.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'assets/iconbiru.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(width: 10.0,),
+                                        const Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Purchasing order',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF344504),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            SizedBox(height: 5.0,),
+                                            Text(
+                                              'Marketing officer',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF667085),
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Spacer(),
+                                        const Text(
+                                          '2,420',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0XFF667085),
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 25.0,right: 20.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'assets/iconbiru.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(width: 10.0,),
+                                        const Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Rejected',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF344504),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            SizedBox(height: 5.0,),
+                                            Text(
+                                              'Marketing officer',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF667085),
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Spacer(),
+                                        const Text(
+                                          '1,210',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0XFF667085),
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  child: Divider(
+                                    color: Color(0xFFEAECF0),
+                                    thickness: 1.0,
+                                  ),
+                                ),
+                                Container(
+                                  height: 60,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.transparent,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 25.0,right: 20.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'assets/iconbiru.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(width: 10.0,),
+                                        const Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Unit not available',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF344504),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            SizedBox(height: 5.0,),
+                                            Text(
+                                              'Marketing officer',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xFF667085),
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Spacer(),
+                                        const Text(
+                                          '20',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0XFF667085),
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                ]
+                            ),
                           ),
                         ),
                       ],

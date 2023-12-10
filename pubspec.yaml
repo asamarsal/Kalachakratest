@@ -45,6 +45,7 @@ dependencies:
   text_form_field_wrapper: ^1.0.0
   shared_preferences: ^2.2.2
   top_snackbar_flutter: ^3.1.0
+  mirai_dropdown_menu: ^0.0.7+3
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,13 @@ flutter:
     - assets/animations/warninggreen.json
     - assets/connectorhijau.png
     - assets/connectorgrey.png
+    - assets/icondropdownbiru.png
+    - assets/icondropdownungu.png
+    - assets/iconhijau.png
+    - assets/iconbiru.png
+    - assets/logomobil/isuzu.png
+    - assets/logomobil/mitsubishi.png
+    - assets/logomobil/suzuki.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

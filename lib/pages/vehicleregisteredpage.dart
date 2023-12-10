@@ -4,6 +4,7 @@ import 'package:animate_gradient/animate_gradient.dart';
 import 'package:kalachakra/pages/financingpage.dart';
 import 'package:page_route_transition/page_route_transition.dart';
 
+
 class VehicleregisteredPage extends StatefulWidget {
   const VehicleregisteredPage({super.key});
 
@@ -12,6 +13,14 @@ class VehicleregisteredPage extends StatefulWidget {
 }
 
 class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
+  String? dropdownValue;
+
+  List<Map<String, dynamic>> listPilihanstatus = [
+    {'name': 'Listing', 'imagePath': 'assets/icondropdownungu.png'},
+    {'name': 'Inspecting', 'imagePath': 'assets/icondropdownungu.png'},
+    {'name': 'Unit not available', 'imagePath': 'assets/icondropdownbiru.png'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,15 +83,16 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 20.0,),
                   Container(
                       padding: EdgeInsets.symmetric(horizontal: 20.0),
                       width: double.infinity,
-                      height: 100,
+                      height: 80,
                       decoration: const BoxDecoration(
                         color: Colors.white,
                       ),
                       child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Nama Mobil', style: TextStyle(fontSize: 22, color: Color(0XFF101828), fontWeight: FontWeight.w400)),
@@ -92,20 +102,72 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                       )
                   ),
                   Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0),
-                      width: double.infinity,
-                      height: 100,
-                      decoration: const BoxDecoration(
-                        color: Colors.green,
-                      ),
-                      child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            //Isi Dropdown disini
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    width: double.infinity,
+                    height: 80,
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          width: double.infinity,
+                          height: 80,
+                          decoration: const BoxDecoration(
+                            color: Colors.transparent,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              DropdownButtonFormField<String>(
+                                hint: const Text('Information Status'),
+                                value: dropdownValue,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                  ),
+                                ),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    dropdownValue = newValue!;
+                                  });
+                                },
+                                items: listPilihanstatus.map((map) {
+                                  return DropdownMenuItem<String>(
+                                    value: map['name'].toString(),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10.0),
+                                        Image.asset(
+                                          map['imagePath'],
+                                          width: 24,
+                                          height: 24,
+                                        ),
+                                        SizedBox(width: 10.0),
+                                        Text(map['name']),
+                                      ],
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ],
+                          ),
+                        ),
 
-                          ]
-                      )
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10.0,),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Divider(
+                      color: Color(0xFFEAECF0),
+                      thickness: 1.0,
+                    ),
                   ),
                   SizedBox(height: 20.0,),
                   Container(
@@ -262,7 +324,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Color(0XFFF9FAFB),
+                                  color: Colors.transparent,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -286,7 +348,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Colors.transparent,
+                                  color: Color(0XFFF9FAFB),
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -310,7 +372,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Color(0XFFF9FAFB),
+                                  color: Colors.transparent,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -334,7 +396,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Colors.transparent,
+                                  color: Color(0XFFF9FAFB),
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -358,7 +420,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Color(0XFFF9FAFB),
+                                  color: Colors.transparent,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -382,7 +444,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 60,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Colors.transparent,
+                                  color: Color(0XFFF9FAFB),
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -406,7 +468,7 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                 height: 100,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: Color(0XFFF9FAFB),
+                                  color: Colors.transparent,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -425,6 +487,13 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
                                       ),
                                     ],
                                   ),
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                child: Divider(
+                                  color: Color(0xFFEAECF0),
+                                  thickness: 2.0,
                                 ),
                               ),
                               Container(
@@ -602,6 +671,29 @@ class _VehicleregisteredPageState extends State<VehicleregisteredPage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class CustomDropdown extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: const Row(
+        children: [
+          Icon(Icons.person),
+          SizedBox(width: 10),
+          Expanded(
+              child: Text("Pilih Pengguna", style: TextStyle(fontSize: 16))
+          ),
+          Icon(Icons.arrow_drop_down)
+        ],
       ),
     );
   }

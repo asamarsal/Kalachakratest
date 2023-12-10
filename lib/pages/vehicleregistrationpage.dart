@@ -93,9 +93,9 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Nomor Registrasi *', style: TextStyle(fontSize: 22, color: Colors.black, fontWeight: FontWeight.w400)),
+                            Text('Registration number *', style: TextStyle(fontSize: 22, color: Color(0XFF101828), fontWeight: FontWeight.w500)),
                             SizedBox(height: 10),
-                            Text('Mohon masukkan nomor registrasi kendaraan', style: TextStyle(fontSize: 16, color: Colors.black54)),
+                            Text('Please insert vehicle registration number.', style: TextStyle(fontSize: 16, color: Color(0XFF667085), fontWeight: FontWeight.w400)),
                           ]
                       )
                   ),
@@ -179,7 +179,7 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Lanjut',
+                                            'Next',
                                             style: TextStyle(color: Colors.white),
                                           ),
                                         ],
@@ -224,13 +224,13 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Nomor Registrasi',
-                                style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71)),
+                                'Registration number',
+                                style: TextStyle(fontSize: 18, color: Color(0xFF1B7E71), fontWeight: FontWeight.w500),
                               ),
                               SizedBox(height: 5.0,),
                               Text(
-                                'Mohon masukkan nomor registrasi kendaraan.',
-                                style: TextStyle(fontSize: 14, color: Color(0XFF24A896)),
+                                'Please insert vehicle registration number.',
+                                style: TextStyle(fontSize: 14, color: Color(0XFF24A896), fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
@@ -266,13 +266,13 @@ class _VehicleregistrationPageState extends State<VehicleregistrationPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Informasi Detail',
-                                style: TextStyle(fontSize: 18, color: Color(0xFF344054)),
+                                'Detail information',
+                                style: TextStyle(fontSize: 18, color: Color(0xFF344054), fontWeight: FontWeight.w500),
                               ),
                               SizedBox(height: 5.0,),
                               Text(
-                                'Mohon masukkan informasi detail kendaraan',
-                                style: TextStyle(fontSize: 14, color: Color(0XFF667085)),
+                                'Please insert vehicle detail information',
+                                style: TextStyle(fontSize: 14, color: Color(0XFF667085), fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),

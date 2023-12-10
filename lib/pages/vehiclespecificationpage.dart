@@ -3,6 +3,7 @@ import 'package:animate_gradient/animate_gradient.dart';
 import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:kalachakra/pages/vehicleregistrationpage.dart';
 import 'package:kalachakra/pages/vehiclesentsuccess.dart';
 import 'package:lottie/lottie.dart';
@@ -459,7 +460,14 @@ class _VehiclespecificationPageState extends State<VehiclespecificationPage> {
                                 ),
                                 const SizedBox(height: 10.0,),
                                 TextFormFieldWrapper(
-                                  formField: formField,
+                                  formField: TextFormField(
+                                    initialValue: '',
+                                    decoration: const InputDecoration(border: InputBorder.none),
+                                    keyboardType: TextInputType.number, // Set jenis keyboard menjadi numeric
+                                    inputFormatters: <TextInputFormatter>[
+                                      FilteringTextInputFormatter.digitsOnly, // Hanya memperbolehkan angka
+                                    ],
+                                  ),
                                   position: TextFormFieldPosition.alone,
                                   prefix: const Icon(
                                     Icons.call_outlined,
